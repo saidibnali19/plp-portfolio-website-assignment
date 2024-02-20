@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Said Ali Portfolio Website</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/script.js" defer></script>
+    </head>
+    <body class="bg-primary text-secondary fs-400 ff-body flow">
+        <header class="ff-title wrapper">
+            <div class="primary-header | flex">
+                <a
+                    class="skip-nav-link | bg-accent text-primary fs-400 no-underline"
+                    href="#main"
+                    >Skip to main content</a
+                >
+                <a class="logo | fs-500 no-underline" href="index.html">
+                    Said Ali
+                </a>
+                <button
+                    class="header-menu-toggler"
+                    data-menu-toggler
+                    aria-controls="primary-navigation"
+                    aria-expanded="false"
+                    aria-label="Menu"
+                >
+                    <span class="hamburger"></span>
+                </button>
+                <nav>
+                    <ul
+                        id="primary-navigation"
+                        class="header-menu | text-secondary uppercase flex"
+                        data-header-menu
+                        role="list"
+                        data-visible="false"
+                    >
+                        <li>
+                            <a href="#" aria-current="page">Home</a>
+                        </li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <!-- Hero section -->
+            <article class="hero | text-primary grid wrapper">
+                <div class="flow">
+                    <h1 class="fs-500">
+                        Hi! I am <span class="fs-700 d-block">Said Ali</span>
+                    </h1>
+                    <p>
+                        A passionate front end developer. I build websites that
+                        look great, feel fantastic and function corrrectly.
+                    </p>
+                    <a
+                        class="hero__cta | bg-accent btn-primary uppercase"
+                        href="#"
+                        >Contact me</a
+                    >
+                </div>
+                <img class="hero__image" src="images/hero-image.JPG" alt="" />
+            </article>
+            <!-- About section -->
+            <article
+                class="about | bg-primary text-secondary wrapper flow"
+                id="about"
+            >
+                <h2 class="fs-600">About me</h2>
+                <div class="grid">
+                    <img
+                        class="about__image"
+                        src="images/about-image.jpg"
+                        alt=""
+                    />
+                    <article class="flow">
+                        <p>
+                            I am a passionate front end developer with
+                            proficiency in:-
+                        </p>
+                        <ul class="about__skills | flex" role="list">
+                            <li class="bg-accent text-primary btn-primary">
+                                HTML
+                            </li>
+                            <li class="bg-accent text-primary btn-primary">
+                                CSS
+                            </li>
+                            <li class="bg-accent text-primary btn-primary">
+                                JavaScript
+                            </li>
+                            <li class="bg-accent text-primary btn-primary">
+                                React
+                            </li>
+                            <li class="bg-accent text-primary btn-primary">
+                                Node
+                            </li>
+                            <li class="bg-accent text-primary btn-primary">
+                                Express
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </article>
+            <!-- Projects section -->
+            <article class="projects | bg-light wrapper flow" id="projects">
+                <h2 class="fs-600">Projects</h2>
+                <div class="flow">
+                    <article class="project | bg-primary grid">
+                        <img src="images/" alt="" />
+                        <div class="flow">
+                            <h3 class="fs-500">Space Tourism Website</h3>
+                            <p>
+                                This was a challenge from front end mentor. The
+                                site was built using vanilla HTML, CSS and
+                                JavaScript. The site is also responsive.
+                            </p>
+                            <a
+                                class="project__cta | text-accent uppercase btn-secondary"
+                                href="https://saidibnali19.github.io/space-tourism-website/"
+                                target="_blank"
+                                >Visit site</a
+                            >
+                        </div>
+                    </article>
+                    <article class="project | bg-primary grid">
+                        <img src="images/project 2.png" alt="" />
+                        <div class="flow">
+                            <h3 class="fs-500">
+                                Kasban Company Template Website
+                            </h3>
+                            <p>
+                                This is a template for a company website. The
+                                site was built using vanilla HTML, CSS and
+                                JavaScript. The site is also responsive.
+                            </p>
+                            <a
+                                class="project__cta | text-accent uppercase btn-secondary"
+                                href="https://saidibnali19.github.io/kasban/"
+                                target="_blank"
+                                >Visit site</a
+                            >
+                        </div>
+                    </article>
+                    <article class="project | bg-primary grid">
+                        <img src="images/project 3.png" alt="" />
+                        <div class="flow">
+                            <h3 class="fs-500">My Portfolio Website</h3>
+                            <p>
+                                This is my portfolio website. The site was built
+                                using vanilla HTML, CSS and JavaScript. The site
+                                is also responsive.
+                            </p>
+                            <a
+                                class="project__cta | text-accent uppercase btn-secondary"
+                                href="https://saidibnali19.github.io/my-portfolio-website/"
+                                target="_blank"
+                                >Visit site</a
+                            >
+                        </div>
+                    </article>
+                </div>
+            </article>
+        </main>
+    </body>
+</html>
