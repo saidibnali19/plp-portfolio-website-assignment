@@ -226,10 +226,28 @@ select {
 
 .btn-secondary {
     padding: 0.3em 1em;
+    border: 2px solid hsl(var(--clr-accent));
+    position: relative;
+    isolation: isolate;
+}
+
+.btn-secondary::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: hsl(var(--clr-accent));
+    z-index: -1;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 350ms ease-in-out, color 350ms ease-in-out;
 }
 
 .btn-secondary:is(:hover, :focus-within) {
-    outline: 2px solid hsl(var(--clr-accent));
+    color: hsl(var(--clr-primary));
+}
+
+.btn-secondary:is(:hover, :focus-within)::after {
+    transform: scale(1);
 }
 
 /* Layout */
