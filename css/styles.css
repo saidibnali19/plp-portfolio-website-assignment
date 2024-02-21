@@ -118,9 +118,10 @@ select {
     --fs-300: var(--step--1);
     --fs-200: var(--step--2);
 
-    --ff-title: "Barlow Condensed", sans-serif;
-    --ff-subtitle: "Bellefair", serif;
-    --ff-body: "Barlow", sans-serif;
+    --ff-heading: serif;
+    --ff-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
 
     --primary-header-min-height: 6rem;
 }
@@ -150,60 +151,37 @@ select {
     color: hsl(var(--clr-accent));
 }
 
-.fs-1000 {
-    font-size: var(--fs-1000);
-    line-height: 1.25;
-    letter-spacing: 0;
-}
-
-@media (min-width: 35em) {
-    .fs-1000 {
-        line-height: 1;
-    }
-}
-
 .fs-900 {
     font-size: var(--fs-900);
-    letter-spacing: 0;
 }
 
 .fs-800 {
     font-size: var(--fs-800);
-    letter-spacing: 0;
 }
 
 .fs-700 {
     font-size: var(--fs-700);
-    letter-spacing: 0;
 }
 
 .fs-600 {
     font-size: var(--fs-600);
-    letter-spacing: 1.25px;
 }
 
 .fs-500 {
     font-size: var(--fs-500);
-    letter-spacing: 2.7px;
 }
 
 .fs-400 {
     font-size: var(--fs-400);
     line-height: 1.6667;
-    letter-spacing: 0;
 }
 
 .fs-300 {
     font-size: var(--fs-300);
-    letter-spacing: 2.36px;
 }
 
-.ff-title {
-    font-family: var(--ff-title);
-}
-
-.ff-subtitle {
-    font-family: var(--ff-subtitle);
+.ff-heading {
+    font-family: var(--ff-heading);
 }
 
 .ff-body {
@@ -256,9 +234,9 @@ select {
 }
 
 .wrapper {
-    max-width: 90rem;
+    max-width: 60rem;
     margin-inline: auto;
-    padding-inline: 1.5rem;
+    padding-inline: var(--space-m);
 }
 
 .flow > * + * {
@@ -466,15 +444,17 @@ select {
 
 /* Hero section */
 .hero {
+    background-image: url("../images/hero-bg.webp");
+    background-size: cover;
+}
+
+.hero > div {
     min-height: calc(100svh - var(--primary-header-min-height));
     grid-template-columns: 3fr 1fr;
     place-items: center;
-    background-image: url("../images/hero-bg.jpg");
-    background-size: cover;
-    position: relative;
 }
 
-.hero div {
+.hero div div {
     background-color: hsl(0 0% 0% / 0.4);
     padding: var(--space-m);
     border-radius: 0.25rem;
@@ -492,8 +472,13 @@ select {
 }
 
 @media (width < 45em) {
-    .hero {
+    .hero > div {
         grid-template-columns: 1fr;
+        justify-items: start;
+    }
+
+    .hero p {
+        max-width: 45ch;
     }
 
     .hero__image {
